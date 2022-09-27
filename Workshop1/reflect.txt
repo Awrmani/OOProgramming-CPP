@@ -1,0 +1,36 @@
+Workshop 1 - Reflection							
+										
+Arman Valaee Asr - 139550206			
+avalaee-asr@myseneca.ca				
+										
+2021-9-19			
+---------------------------------------
+
+There are plenty of new concepts in this workshop such as linkage, static keyword, 
+and the two command-line arguments.
+
+There are different types of linkages we can use to link the variables with the same name in different modules or the same module. 
+If they are in different modules we use external linkage with the “extern” keyword and when they are in the same module but different scopes, we use internal linkage.
+
+We use these types of linkages when we want to connect variables with the same name in different scopes of our program and give them a single value.
+
+Another new concept which we used in this workshop is the static variable. 
+In the past semesters, we used to define a global variable when we want to count something related to the class. 
+We would use a global variable because we needed only one variable for the whole program and we couldn’t define it in the class body. 
+Now we can use static variables instead of that to do the same thing. 
+We can define the static variable inside the class (not as a member variable, but in a member function) and it is related to the class, not the object. 
+We can have 100 objects of that class but there will be only one static variable created for it and all of them can access its value and change it but it is common to all of them.
+
+In this program, we want to have a number of the times that we display the time, 
+but there can be multiple objects which display their time and we nut this number to be common and joint between them all. 
+So we defined “static unsigned int counter = 0” in the display function to keep track of the count of the time the display function is called.
+
+To upgrade our event class, I changed the m_desc variable from an array of 128 characters to a pointer. 
+In part 2 there is no limit to the number of m_desc characters and we don’t want to put a lot of memory aside for this issue, so we use dynamic variables.
+
+Another upgrade related to the event class is about copy constructor, copy assignment, and destructor. 
+We used dynamic variables in this part so we have to destruct it, otherwise, there will be a memory leak. 
+
+Also, it is important to have a copy constructor and copy assignment in every class, otherwise, may occur some problems.
+
+I had the most problems with understanding the concept of command-line arguments, but I managed to figure it out!
