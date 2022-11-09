@@ -1,0 +1,115 @@
+// ===================================================================================
+//  Assignment: 2 
+//  Milestone : 4 - Reflect
+// ===================================================================================
+//  Student Name  : Arman Valaee Asr
+//  Student ID    : 139550206
+//  Student Email : avalaee-asr@myseneca.ca
+//  Course Section: ZCC
+// ===================================================================================
+
+1.
+a) commonHelpers.h
+
+“None developed.”
+
+b) account.h
+
+void upperCase(char str[]);
+
+void getPass(char str[]);
+
+void freeupAccount(struct AccountTicketingData acc[], int index);
+
+int loadAccounts(struct Account acc[], int MaxSize);
+
+int updateAccounts(struct Account acc[], int MaxSize);
+
+void archivesAccount(struct AccountTicketingData acc[], int index);
+
+int archivedAccountsCounter(int MaxSize);
+
+int logingIn(struct AccountTicketingData acc[]); 
+ 	
+c) ticket.h 
+
+int getTicketNo(struct AccountTicketingData acc[], const struct Account* logged);
+
+void openTicket(struct AccountTicketingData acc[], int ticketno);
+
+void newTicket(struct AccountTicketingData acc[], const struct Account* logged, int index);
+
+int findTicketIndexByTicktNum(int ticktno, const struct AccountTicketingData acc[], int prompt);
+
+int removeAccount(struct AccountTicketingData acc[], const struct Account* loggedacc, int index);
+
+void newMessage(struct AccountTicketingData acc[], const struct Account* loggedacc, int ticktIndex);
+
+int closeTicket(struct AccountTicketingData acc[], const struct Account* loggedacc, int ticktIndex);
+
+void manageTicketMenu(struct AccountTicketingData acc[], const struct Account* loggedacc, int ticktIndex);
+
+void createNewTicket(struct AccountTicketingData acc[], const struct Account* loggedacc);
+
+int modifyTicketNo(struct AccountTicketingData acc[], const struct Account* loggedacc, int ticktno);
+
+void modifyTicketMenu(struct AccountTicketingData acc[], const struct Account* loggedacc, int ticktno);
+
+void freeupTickets(struct AccountTicketingData acc[], int index);
+
+int loadTickets(struct Ticket* tickt, int MaxSize);
+
+int updateTickets(struct Ticket* tickt, int MaxSize);
+
+void archivesTickets(struct AccountTicketingData acc[], int index);
+
+void freeupClosedTickets(struct AccountTicketingData acc[]);
+
+int archivesClosedTickets(struct AccountTicketingData acc[]);
+
+int archivedTicketsCounter(int MaxSize, int* msgRecords);
+
+d) accountTicketingUI.h 
+	
+void displayCustomerTicketHeader();
+
+void displayCustomerTicketList(struct AccountTicketingData acc[], const struct Account* loggedacc);
+
+void displayAgentTicketHeader();
+
+void displayAgentNewTicketList(struct AccountTicketingData acc[]);
+
+void displayAgentActiveTicketList(struct AccountTicketingData acc[]);
+
+void displayAgentClosedTicketList(struct AccountTicketingData acc[]);
+
+void displayAgentMenu(const struct Account* loggedacc);
+
+void displayCustomerMenu(const struct Account* loggedacc);
+
+void addNewAccount(struct AccountTicketingData acc[]);
+
+
+2. For me, one of the best parts was loading accounts and tickets to the program.
+I cannot say fun, because I had a lot of problem doing it, but I liked it because it was challenging, and I find it very useful.
+Also, I have never done reading and writing to a file before this, so I learned a lot, that is why I like it. 
+I had the most challenge when I wanted to count the records in the file, but eventually I found a good way of doing it. 
+Archiving closed tickets when an agent removes an account, or when they just want to archive all closed tickets and freeing up 
+the occupied space by them was also enjoyable to develop.
+The other section that I enjoyed developing is the agent managing ticket section.
+It is fun working with structs and specially Tickets struct since it has various member. I liked how we used these nested menus. 
+It can be hard to organize it but using functions will be a lot of help. I liked how I could make a function for every option of the menu, and the functions are actually useful.
+
+3. It is hard to say which part was most annoying. Some parts could be really hard and annoying when I was coding, but after dealing with the errors, I enjoyed every part.
+But since I must mention two of them, one of them is the process of opening a ticket.
+First, I had to get a ticket number and check everything about it. For example, if the logged in user has access to it? Does it exist? Check if it’s in the recent list or not.
+I dedicated two functions for this process. One to get the appropriate ticket number and another one to open the relevant ticket, 
+in the correct format, I didn’t dislike it but it was pretty much problematic. 
+The other part was the password. It was all fine until Milestone 3, but in Milestone 4 it used ‘(‘and ‘)’. 
+Parentheses were not on the list of acceptable symbols, but they were recognized by putchar function. 
+First, I decided to use an string of acceptable chars and check it with strchr, but for some reason it didn’t work. 
+Then I used putchar but with additional if statement that doesn’t allow parentheses. 
+
+
+
+
