@@ -1,0 +1,23 @@
+// Name: Arman Valaee Asr
+// Seneca Student ID: 139550206
+// Seneca email: avalaee-asr@myseneca.ca
+// Date of completion: 2021-12-4
+//
+// I confirm that I am the only author of this file
+//   and the content was created entirely by me.
+
+This assignment was a combination of almost every material we learned in this course, such as static variables, external linkage, 
+containers and iterators, error handling, lambda expressions, algorithms, and …. 
+
+One of the new things in this assignment is the deque container. We used vector and list several times in our workshop, 
+but we never used deque. Deque is a kind of container which is very similar to a vector, but the only difference is that you can edit a deque from both front and back, 
+unlike a vector that you can only edit from the back.
+
+In general, this assignment was not very challenging, except for milestone 3. I had to go back and change the extractTocken function in the Utilities module to make milestone 3 work.
+
+Other than the lineManager constructor, run function member, and attemptToMoveOrder from the Workstation module, there was no challenge in milestone 3.
+
+In my opinion, the most important outcome of this assignment was to review all the course material, plus learn more about deque containers. 
+Also, we had to use the algorithms instead of normal loops in some parts, which helped me master algorithms more than before.
+
+It was a good thing to practice reading from a file and load the data inside our classes again.
